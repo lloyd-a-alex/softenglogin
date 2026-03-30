@@ -4,7 +4,7 @@ import qmulLogo from '../assets/qmul-logo.jpg';
 
 const ModuleOrganiserDashboard = () => {
   const [ecs, setEcs] = useState([
-    { id: 'EC-1234', name: 'John Doe', status: 'Pending' },
+    { id: 'EC-1234', name: 'Akbar Ali', status: 'Pending' },
     { id: 'EC-5678', name: 'Jane Doe', status: 'Approved' }
   ]);
 
@@ -34,7 +34,7 @@ const ModuleOrganiserDashboard = () => {
         </div>
         
         <div className="mo-panel">
-          <h2>View Module ECs</h2>
+          <h2>All module ECs</h2>
           
           <div className="mo-controls">
             <input type="text" placeholder="Search ECs..." className="search-bar" />
