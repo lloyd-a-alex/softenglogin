@@ -58,7 +58,7 @@ const ModuleOrganiserDashboard = () => {
                 <tr key={index}>
                   <td>{ec.id}</td>
                   <td>{ec.name}</td>
-                  <td><button className="review-btn">Review</button></td>
+                  <td><span className="action-link">View details</span></td>
                   <td><span className={adge }>{ec.status}</span></td>
                 </tr>
               ))}

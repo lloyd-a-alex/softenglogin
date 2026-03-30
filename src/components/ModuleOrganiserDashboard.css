@@ -151,3 +151,13 @@
 .settings-link:hover {
   color: white;
 }
+
+.action-link {
+  color: #0056b3;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 500;
+}
+.action-link:hover {
+  color: #003d82;
+}
