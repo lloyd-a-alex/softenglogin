@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Home, Activity, Upload, Settings, LogOut, CheckCircle, XCircle, FileText } from 'lucide-react';
 import './ModuleOrganiserDashboard.css';
-import qmulLogo from '../assets/qmul-logo.png'; 
+import qmulLogo from '../assets/qmul-logo.jpg'; 
 
 const ModuleOrganiserDashboard = () => {
   const navigate = useNavigate();

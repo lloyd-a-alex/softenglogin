@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
-import qmulLogo from '../assets/qmul-logo.png'; 
+import qmulLogo from '../assets/qmul-logo.jpg'; 
 
 const Login = () => {
   const [email, setEmail] = useState('');
