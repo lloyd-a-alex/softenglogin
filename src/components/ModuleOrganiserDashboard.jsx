@@ -70,7 +70,48 @@ const ModuleOrganiserDashboard = () => {
           </div>
         </div>}
 
-        {/* TABLE PANEL WILL GO HERE */}
+        {<div className="mo-panel">
+          <h2>All module ECs</h2>
+          
+          <div className="mo-controls">
+            <input 
+              type="text" 
+              placeholder="Search by Name or ID..." 
+              className="search-bar" 
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <select 
+              className="date-filter"
+              value={dateFilter}
+              onChange={(e) => setDateFilter(e.target.value)}
+            >
+              <option>Newest First</option>
+              <option>Oldest First</option>
+            </select>
+          </div>
+          
+          <table className="ec-table">
+            <thead>
+              <tr>
+                <th>EC ID</th>
+                <th>Name</th>
+                <th>Action</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredEcs.map((ec, index) => (
+                <tr key={index}>
+                  <td>{ec.id}</td>
+                  <td>{ec.name}</td>
+                  <td><span className="action-link">View details</span></td>
+                  <td><span className={`badge ${ec.status.toLowerCase()}`}>{ec.status}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>}
 
       </div>
     </div>
