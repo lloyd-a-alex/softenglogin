@@ -16,6 +16,20 @@ const ModuleOrganiserDashboard = () => {
       
       <div className="mo-content">
         <h1>Module Organiser Dashboard</h1>
+        
+        <div className="mo-panel">
+          <h2>View Module ECs</h2>
+          
+          <div className="mo-controls">
+            <input type="text" placeholder="Search ECs..." className="search-bar" />
+            <select className="date-filter">
+              <option>Filter by Date</option>
+              <option>Newest First</option>
+              <option>Oldest First</option>
+            </select>
+          </div>
+          
+        </div>
       </div>
     </div>
   );

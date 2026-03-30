@@ -34,3 +34,32 @@
   flex: 1;
   padding: 40px;
 }
+
+.mo-panel {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.mo-panel h2 {
+  margin-top: 0;
+  color: #333;
+  margin-bottom: 20px;
+}
+.mo-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.search-bar {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.date-filter {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
