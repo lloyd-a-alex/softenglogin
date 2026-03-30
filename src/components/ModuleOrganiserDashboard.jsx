@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ModuleOrganiserDashboard.css';
 import qmulLogo from '../assets/qmul-logo.jpg';
 
 const ModuleOrganiserDashboard = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => navigate('/login');
+
   const [ecs, setEcs] = useState([
     { id: 'EC-1234', name: 'Akbar Ali', status: 'Pending' },
     { id: 'EC-5678', name: 'Jane Doe', status: 'Approved' }
@@ -72,5 +76,6 @@ const ModuleOrganiserDashboard = () => {
 };
 
 export default ModuleOrganiserDashboard;
+
 
 
