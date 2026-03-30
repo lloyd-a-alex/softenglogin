@@ -98,3 +98,40 @@
 }
 .badge.pending { background-color: #ffeeba; color: #856404; }
 .badge.approved { background-color: #d4edda; color: #155724; }
+
+.mo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.header-left h1 {
+  margin: 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-search {
+  background: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e0e0e0;
+}
+.header-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 50%;
+}

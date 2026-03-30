@@ -20,7 +20,18 @@ const ModuleOrganiserDashboard = () => {
       </div>
       
       <div className="mo-content">
-        <h1>Module Organiser Dashboard</h1>
+        <div className="mo-header">
+          <div className="header-left">
+            <h1>Welcome, Mustafa</h1>
+          </div>
+          <div className="header-right">
+            <div className="header-search">
+              <span>🔍</span>
+              <input type="text" placeholder="Search..." />
+            </div>
+            <div className="profile-icon"></div>
+          </div>
+        </div>
         
         <div className="mo-panel">
           <h2>View Module ECs</h2>
