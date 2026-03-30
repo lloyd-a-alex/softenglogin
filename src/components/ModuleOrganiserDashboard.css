@@ -1,0 +1,11 @@
+.mo-dashboard-container { display: flex; height: 100vh; background-color: #f4f4f4; font-family: Arial, sans-serif; }
+.mo-sidebar { width: 260px; background-color: #00205b; color: white; display: flex; flex-direction: column; }
+.mo-sidebar-brand { padding: 30px 20px; display: flex; justify-content: center; }
+.mo-sidebar-brand img { width: 140px; }
+.mo-nav-menu { flex: 1; padding-top: 20px; }
+.mo-nav-item { padding: 15px 20px 15px 30px; display: flex; align-items: center; gap: 15px; cursor: pointer; color: #e0e0e0; }
+.mo-nav-item:hover { color: white; background-color: rgba(255, 255, 255, 0.05); }
+.mo-nav-item.active { background-color: rgba(255, 255, 255, 0.15); color: white; border-radius: 0 25px 25px 0; margin-right: 20px; font-weight: bold; }
+.mo-bottom-nav { padding-bottom: 30px; }
+.mo-main-content { flex: 1; padding: 40px 60px; overflow-y: auto; }
+.mo-main-content h1 { font-size: 2rem; color: #333; margin-bottom: 30px; }
