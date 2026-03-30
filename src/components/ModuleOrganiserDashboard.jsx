@@ -16,7 +16,7 @@ const ModuleOrganiserDashboard = () => {
         </div>
         <div className="sidebar-links">
           <p className="active-link">View Module ECs</p>
-        </div>
+        </div>`n        <div className="sidebar-bottom">`n          <p className="settings-link">⚙️ Settings</p>`n          <p className="settings-link" onClick={handleLogout}>🚪 Log out</p>`n        </div>
       </div>
       
       <div className="mo-content">
@@ -72,4 +72,5 @@ const ModuleOrganiserDashboard = () => {
 };
 
 export default ModuleOrganiserDashboard;
+
 
