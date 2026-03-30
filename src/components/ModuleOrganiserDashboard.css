@@ -9,3 +9,12 @@
 .mo-bottom-nav { padding-bottom: 30px; }
 .mo-main-content { flex: 1; padding: 40px 60px; overflow-y: auto; }
 .mo-main-content h1 { font-size: 2rem; color: #333; margin-bottom: 30px; }
+.mo-table-section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.mo-table-section h2 { margin-top: 0; margin-bottom: 20px; font-size: 1.3rem; color: #333; }
+.mo-tickets-table { width: 100%; border-collapse: collapse; text-align: left; }
+.mo-tickets-table th { padding: 12px 15px; border-bottom: 2px solid #eee; color: #666; font-weight: bold; }
+.mo-tickets-table td { padding: 15px; border-bottom: 1px solid #f5f5f5; vertical-align: middle; }
+.mo-badge.pending { background-color: #ffb86c; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+.mo-ec-icon { text-align: center; }
+.mo-review-btn { background-color: #00205b; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+.mo-review-btn:hover { background-color: #00153b; }
