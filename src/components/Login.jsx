@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
+// dont forget png in assets folder
+import qmulLogo from '../assets/qmul-logo.png'; 
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    console.log('Logging in user:', email);
+    // TODO: Dawud needs to link this to the dashboard router
+  };
+
   return (
     <div className="login-wrapper">
       <div className="login-left">
-        {/* Logo png will go here later */}
+        <img src={qmulLogo} alt="QMUL Logo" className="qmul-logo" />
         <h1>Welcome to the</h1>
         <h2>EECS support system</h2>
       </div>
@@ -13,14 +24,26 @@ const Login = () => {
       <div className="login-right">
         <div className="form-container">
           <h2>Login</h2>
-          <form>
+          <form onSubmit={handleLogin}>
             <div className="input-group">
               <label>email</label>
-              <input type="email" placeholder="e.g. ec24430@qmul.ac.uk" />
+              <input 
+                type="email" 
+                placeholder="e.g. ec24430@qmul.ac.uk" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </div>
             <div className="input-group">
               <label>Password</label>
-              <input type="password" placeholder="Password" />
+              <input 
+                type="password" 
+                placeholder="••••••••" 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
             </div>
             <button type="submit">Login</button>
           </form>
