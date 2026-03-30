@@ -33,7 +33,7 @@ const ModuleOrganiserDashboard = () => {
           </div>
         </div>
         
-        <div className="mo-panel">
+        <div className="module-cards">`n          <div className="mod-card"><h3>ECS506U Software Engineering</h3><p>Active ECs: 5</p></div>`n          <div className="mod-card"><h3>ECS505U Web Dev</h3><p>Active ECs: 2</p></div>`n          <div className="mod-card"><h3>ECS504U Database</h3><p>Active ECs: 1</p></div>`n        </div>`n`n        <div className="mo-panel">
           <h2>All module ECs</h2>
           
           <div className="mo-controls">
@@ -72,3 +72,4 @@ const ModuleOrganiserDashboard = () => {
 };
 
 export default ModuleOrganiserDashboard;
+
