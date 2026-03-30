@@ -63,3 +63,38 @@
   border-radius: 4px;
   background-color: white;
 }
+
+.ec-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.ec-table th {
+  background-color: #f9fafb;
+  padding: 12px 15px;
+  border-bottom: 2px solid #eaeaea;
+  color: #555;
+}
+.ec-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+.review-btn {
+  background-color: #00205b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.review-btn:hover {
+  background-color: #001133;
+}
+.badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.badge.pending { background-color: #ffeeba; color: #856404; }
+.badge.approved { background-color: #d4edda; color: #155724; }
