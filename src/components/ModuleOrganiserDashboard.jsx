@@ -49,7 +49,7 @@ const ModuleOrganiserDashboard = () => {
                   <td>{ec.id}</td>
                   <td>{ec.name}</td>
                   <td><button className="review-btn">Review</button></td>
-                  <td><span className={adge }>{ec.status}</span></td>
+                  <td><span className="badge">{ec.status}</span></td>
                 </tr>
               ))}
             </tbody>
