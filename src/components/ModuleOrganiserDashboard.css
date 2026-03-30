@@ -161,3 +161,14 @@
 .action-link:hover {
   color: #003d82;
 }
+
+/* Header Layout */
+.mo-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.header-left h1 { margin: 0; color: #333; font-size: 1.8rem; }
+.profile-icon { width: 40px; height: 40px; background-color: #00205b; border-radius: 50%; }
+
+/* Module Summary Cards */
+.module-cards { display: flex; gap: 20px; margin-bottom: 30px; }
+.mod-card { background: white; padding: 20px; border-radius: 8px; flex: 1; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-top: 4px solid #00205b; }
+.mod-card h3 { margin-top: 0; color: #00205b; font-size: 1.1rem; margin-bottom: 10px; }
+.mod-card p { margin: 0; font-weight: bold; color: #555; }
