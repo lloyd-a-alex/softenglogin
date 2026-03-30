@@ -5,6 +5,27 @@ import qmulLogo from '../assets/qmul-logo.jpg';
 
 const ModuleOrganiserDashboard = () => {
   const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [dateFilter, setDateFilter] = useState('Newest First');
+
+  const [ecs, setEcs] = useState([
+    { id: 'EC-8832', name: 'Akbar Ali', module: 'ECS506U', date: '2026-03-25', status: 'Pending' },
+    { id: 'EC-8835', name: 'Jane Doe', module: 'ECS505U', date: '2026-03-20', status: 'Approved' },
+    { id: 'EC-8810', name: 'John Smith', module: 'ECS504U', date: '2026-03-28', status: 'Rejected' },
+    { id: 'EC-8841', name: 'Alex Lloyd', module: 'ECS506U', date: '2026-03-29', status: 'Pending' }
+  ]);
+
+  // ez way to filter and sort
+  const filteredEcs = ecs
+    .filter(ec => 
+      ec.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+      ec.id.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (dateFilter === 'Newest First') return new Date(b.date) - new Date(a.date);
+      if (dateFilter === 'Oldest First') return new Date(a.date) - new Date(b.date);
+      return 0;
+    });
 
   return (
     <div className="mo-container">
