@@ -4,3 +4,33 @@
   font-family: Arial, sans-serif;
   display: flex;
 }
+
+.mo-sidebar {
+  width: 250px;
+  background-color: #00205b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-logo-container {
+  padding: 30px 20px;
+  text-align: center;
+}
+.sidebar-logo {
+  width: 150px;
+}
+.sidebar-links {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.active-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.mo-content {
+  flex: 1;
+  padding: 40px;
+}
