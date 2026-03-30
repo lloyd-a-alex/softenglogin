@@ -3,7 +3,6 @@ import './ModuleOrganiserDashboard.css';
 import qmulLogo from '../assets/qmul-logo.jpg';
 
 const ModuleOrganiserDashboard = () => {
-  // dummy data so it doesnt look empty
   const [ecs, setEcs] = useState([
     { id: 'EC-1234', name: 'John Doe', status: 'Pending' },
     { id: 'EC-5678', name: 'Jane Doe', status: 'Approved' }
@@ -49,7 +48,7 @@ const ModuleOrganiserDashboard = () => {
                   <td>{ec.id}</td>
                   <td>{ec.name}</td>
                   <td><button className="review-btn">Review</button></td>
-                  <td><span className={`badge ${ec.status.toLowerCase()}`}>{ec.status}</span></td>
+                  <td><span className={adge }>{ec.status}</span></td>
                 </tr>
               ))}
             </tbody>
