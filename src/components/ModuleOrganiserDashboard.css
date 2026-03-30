@@ -1,30 +1,6 @@
-.mo-dashboard-container { display: flex; height: 100vh; background-color: #f4f4f4; font-family: Arial, sans-serif; }
-.mo-sidebar { width: 260px; background-color: #00205b; color: white; display: flex; flex-direction: column; }
-.mo-sidebar-brand { padding: 30px 20px; display: flex; justify-content: center; }
-.mo-sidebar-brand img { width: 140px; }
-.mo-nav-menu { flex: 1; padding-top: 20px; }
-.mo-nav-item { padding: 15px 20px 15px 30px; display: flex; align-items: center; gap: 15px; cursor: pointer; color: #e0e0e0; }
-.mo-nav-item:hover { color: white; background-color: rgba(255, 255, 255, 0.05); }
-.mo-nav-item.active { background-color: rgba(255, 255, 255, 0.15); color: white; border-radius: 0 25px 25px 0; margin-right: 20px; font-weight: bold; }
-.mo-bottom-nav { padding-bottom: 30px; }
-.mo-main-content { flex: 1; padding: 40px 60px; overflow-y: auto; }
-.mo-main-content h1 { font-size: 2rem; color: #333; margin-bottom: 30px; }
-.mo-table-section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-.mo-table-section h2 { margin-top: 0; margin-bottom: 20px; font-size: 1.3rem; color: #333; }
-.mo-tickets-table { width: 100%; border-collapse: collapse; text-align: left; }
-.mo-tickets-table th { padding: 12px 15px; border-bottom: 2px solid #eee; color: #666; font-weight: bold; }
-.mo-tickets-table td { padding: 15px; border-bottom: 1px solid #f5f5f5; vertical-align: middle; }
-.mo-badge.pending { background-color: #ffb86c; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
-.mo-ec-icon { text-align: center; }
-.mo-review-btn { background-color: #00205b; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-.mo-review-btn:hover { background-color: #00153b; }
-.mo-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 1000; }
-.mo-modal-content { background: white; padding: 30px; border-radius: 12px; width: 500px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-.mo-modal-content h2 { margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 15px; }
-.mo-modal-details p { margin: 10px 0; font-size: 1.1rem; }
-.mo-evidence-box { display: flex; align-items: center; gap: 10px; background: #f0f4f8; padding: 15px; border-radius: 8px; margin: 20px 0; color: #00205b; font-weight: bold; cursor: pointer; border: 1px dashed #c0d3e8; }
-.mo-modal-actions { display: flex; gap: 15px; margin-top: 25px; }
-.mo-modal-actions button { flex: 1; padding: 12px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1rem; }
-.mo-btn-approve { background: #28a745; color: white; }
-.mo-btn-reject { background: #dc3545; color: white; }
-.mo-btn-cancel { background: #e2e6ef; color: #333; }
+.mo-container {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
