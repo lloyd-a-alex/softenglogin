@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ModuleOrganiserDashboard.css';
 import qmulLogo from '../assets/qmul-logo.jpg';
 
 const ModuleOrganiserDashboard = () => {
+  // dummy data so it doesnt look empty
+  const [ecs, setEcs] = useState([
+    { id: 'EC-1234', name: 'John Doe', status: 'Pending' },
+    { id: 'EC-5678', name: 'Jane Doe', status: 'Approved' }
+  ]);
+
   return (
     <div className="mo-container">
       <div className="mo-sidebar">
@@ -25,9 +31,29 @@ const ModuleOrganiserDashboard = () => {
             <select className="date-filter">
               <option>Filter by Date</option>
               <option>Newest First</option>
-              <option>Oldest First</option>
             </select>
           </div>
+          
+          <table className="ec-table">
+            <thead>
+              <tr>
+                <th>EC ID</th>
+                <th>Name</th>
+                <th>Action</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ecs.map((ec, index) => (
+                <tr key={index}>
+                  <td>{ec.id}</td>
+                  <td>{ec.name}</td>
+                  <td><button className="review-btn">Review</button></td>
+                  <td><span className={adge }>{ec.status}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
           
         </div>
       </div>
