@@ -59,7 +59,7 @@ const ModuleOrganiserDashboard = () => {
                   <td>{ec.id}</td>
                   <td>{ec.name}</td>
                   <td><span className="action-link">View details</span></td>
-                  <td><span className={adge }>{ec.status}</span></td>
+                  <td><span className={`badge ${ec.status.toLowerCase()}`}>{ec.status}</span></td>
                 </tr>
               ))}
             </tbody>
