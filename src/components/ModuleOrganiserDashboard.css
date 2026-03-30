@@ -135,3 +135,19 @@
   background-color: #ddd;
   border-radius: 50%;
 }
+
+.mo-sidebar {
+  justify-content: space-between;
+}
+.sidebar-bottom {
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.settings-link {
+  color: #ccc;
+  cursor: pointer;
+  padding: 10px;
+}
+.settings-link:hover {
+  color: white;
+}
