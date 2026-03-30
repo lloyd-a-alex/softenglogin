@@ -1,20 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+import ModuleOrganiserDashboard from './components/ModuleOrganiserDashboard';
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* automatically redirect the root to the login page */}
         <Route path="/" element={<Navigate to="/login" />} />
-        
-        {/* login page */}
         <Route path="/login" element={<Login />} />
-        
-        {/* The dummy dashboard u built */}
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/module-organiser" element={<ModuleOrganiserDashboard />} />
       </Routes>
     </Router>
   );
