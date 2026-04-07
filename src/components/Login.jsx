@@ -7,6 +7,7 @@ import qmulEECS from '../assets/qmul-eecs.jpg';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('Module organiser');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -20,7 +21,17 @@ const Login = () => {
       return;
     }
 
-    navigate('/module-organiser');
+    if (password !== 'password123') {
+      setError('Wrong password. (its password123)');
+      return;
+    }
+
+    if (role === 'Module organiser') {
+      navigate('/module-organiser');
+      return;
+    }
+
+    setError('you add role page for other roles');
   };
 
   return (
@@ -42,8 +53,23 @@ const Login = () => {
               <label>Password</label>
               <input type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
+            <div className="input-group">
+              <label>Role</label>
+              <select value={role} onChange={(e) => setRole(e.target.value)}>
+                <option>Student</option>
+                <option>Module organiser</option>
+                <option>Lab staff</option>
+              </select>
+            </div>
             {error && <p className="login-error">{error}</p>}
             <button type="submit">Login</button>
+            <button
+              type="button"
+              className="forgot-link"
+              onClick={() => setError('idk how to do this.')}
+            >
+              Forgot password?
+            </button>
           </form>
         </div>
       </div>

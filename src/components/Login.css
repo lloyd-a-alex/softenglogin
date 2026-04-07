@@ -67,6 +67,14 @@
   font-size: 1rem;
 }
 
+.input-group select {
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 1rem;
+  background: white;
+}
+
 button {
   margin-top: 30px;
   width: 100%;
@@ -81,6 +89,22 @@ button {
 
 button:hover {
   background-color: #f0f0f0;
+}
+
+.forgot-link {
+  margin-top: 10px;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 10px 0 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #143573;
+  cursor: pointer;
+}
+.forgot-link:hover {
+  text-decoration: underline;
+  background: transparent;
 }
 
 .login-error {
