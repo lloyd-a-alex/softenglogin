@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ModuleOrganiserDashboard.css';
 import qmulLogo from '../assets/qmul-logo.jpg';
+import qmulLogoWhite from '../assets/qmul-logo-white.png';
 
 const ModuleOrganiserDashboard = () => {
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ const ModuleOrganiserDashboard = () => {
           </div>
           <div className="header-right">
             <div className="east-icon">
-              <img src="/src/assets/qmul-logo-white.png" alt="QMUL White Logo" className="east-Logo" />
+              <img src={qmulLogoWhite} alt="QMUL White Logo" className="east-Logo" />
             </div>
           </div>
         </div>
