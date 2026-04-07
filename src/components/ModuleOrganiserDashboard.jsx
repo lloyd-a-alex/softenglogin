@@ -183,6 +183,14 @@ const ModuleOrganiserDashboard = () => {
             <h2>{tableTitle}</h2>
 
             <div className="mo-controls">
+              <select 
+                className="date-filter"
+                value={dateFilter}
+                onChange={(e) => setDateFilter(e.target.value)}
+              >
+                <option>Newest First</option>
+                <option>Oldest First</option>
+              </select>
               <input 
                 type="text" 
                 placeholder="Search by Name or ID..." 
@@ -199,56 +207,50 @@ const ModuleOrganiserDashboard = () => {
                 <option>Pending</option>
                 <option>Closed</option>
               </select>
-              <select 
-                className="date-filter"
-                value={dateFilter}
-                onChange={(e) => setDateFilter(e.target.value)}
-              >
-                <option>Newest First</option>
-                <option>Oldest First</option>
-              </select>
             </div>
           </div>
           
-          <table className="ec-table">
-            <thead>
-              <tr>
-                <th>EC ID</th>
-                <th>Category</th>
-                <th>Type</th>
-                <th>Date received</th>
-                <th>Status</th>
-                <th />
-              </tr>
-            </thead>
-            <tbody>
-              {filteredEcs.map((ec, index) => (
-                <tr
-                  key={index}
-                  className={selectedEc?.id === ec.id ? 'ec-row--selected' : ''}
-                  onClick={() => openDetails(ec)}
-                >
-                  <td>{ec.id}</td>
-                  <td>{ec.category}</td>
-                  <td>{ec.type}</td>
-                  <td>{ec.dateReceived}</td>
-                  <td><span className={`badge ${ec.status.toLowerCase()}`}>{ec.status}</span></td>
-                  <td className="ec-action-cell">
-                    <button
-                      type="button"
-                      className="action-link action-button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        openDetails(ec);
-                      }}
-                    >
-                      View details
-                    </button>
-                  </td>
+          <div className="ec-table-wrap">
+            <table className="ec-table">
+              <thead>
+                <tr>
+                  <th>EC ID</th>
+                  <th>Category</th>
+                  <th>Type</th>
+                  <th>Date received</th>
+                  <th>Status</th>
+                  <th />
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {filteredEcs.map((ec, index) => (
+                  <tr
+                    key={index}
+                    className={selectedEc?.id === ec.id ? 'ec-row--selected' : ''}
+                    onClick={() => openDetails(ec)}
+                  >
+                    <td>{ec.id}</td>
+                    <td>{ec.category}</td>
+                    <td>{ec.type}</td>
+                    <td>{ec.dateReceived}</td>
+                    <td><span className={`badge ${ec.status.toLowerCase()}`}>{ec.status}</span></td>
+                    <td className="ec-action-cell">
+                      <button
+                        type="button"
+                        className="action-link action-button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openDetails(ec);
+                        }}
+                      >
+                        View details
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           {filteredEcs.length === 0 && (
             <div className="mo-empty">
