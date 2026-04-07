@@ -8,6 +8,7 @@ const ModuleOrganiserDashboard = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [dateFilter, setDateFilter] = useState('Newest First');
+  const [selectedEc, setSelectedEc] = useState(null);
 
   const [ecs, setEcs] = useState([
     { id: 'EC-8832', name: 'Akbar Ali', module: 'ECS506U', date: '2026-03-25', status: 'Pending' },
@@ -27,6 +28,14 @@ const ModuleOrganiserDashboard = () => {
       if (dateFilter === 'Oldest First') return new Date(a.date) - new Date(b.date);
       return 0;
     });
+
+  const openDetails = (ec) => {
+    setSelectedEc(ec);
+  };
+
+  const closeDetails = () => {
+    setSelectedEc(null);
+  };
 
   return (
     <div className="mo-container">
@@ -108,13 +117,74 @@ const ModuleOrganiserDashboard = () => {
                 <tr key={index}>
                   <td>{ec.id}</td>
                   <td>{ec.name}</td>
-                  <td><span className="action-link">View details</span></td>
+                  <td>
+                    <button
+                      type="button"
+                      className="action-link action-button"
+                      onClick={() => openDetails(ec)}
+                    >
+                      View details
+                    </button>
+                  </td>
                   <td><span className={`badge ${ec.status.toLowerCase()}`}>{ec.status}</span></td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>}
+
+        {selectedEc && (
+          <div
+            className="mo-modal-overlay"
+            role="presentation"
+            onMouseDown={(e) => {
+              if (e.target === e.currentTarget) closeDetails();
+            }}
+          >
+            <div
+              className="mo-modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="mo-modal-title"
+              onMouseDown={(e) => e.stopPropagation()}
+            >
+              <div className="mo-modal-header">
+                <div>
+                  <h3 id="mo-modal-title" className="mo-modal-title">EC details</h3>
+                  <p className="mo-modal-subtitle">{selectedEc.id} • {selectedEc.module}</p>
+                </div>
+                <button type="button" className="mo-modal-close" onClick={closeDetails} aria-label="Close">
+                  ✕
+                </button>
+              </div>
+
+              <div className="mo-modal-grid">
+                <div className="mo-field">
+                  <div className="mo-field-label">Student</div>
+                  <div className="mo-field-value">{selectedEc.name}</div>
+                </div>
+                <div className="mo-field">
+                  <div className="mo-field-label">Date received</div>
+                  <div className="mo-field-value">{selectedEc.date}</div>
+                </div>
+                <div className="mo-field">
+                  <div className="mo-field-label">Status</div>
+                  <div className="mo-field-value">
+                    <span className={`badge ${selectedEc.status.toLowerCase()}`}>{selectedEc.status}</span>
+                  </div>
+                </div>
+                <div className="mo-field">
+                  <div className="mo-field-label">Module</div>
+                  <div className="mo-field-value">{selectedEc.module}</div>
+                </div>
+              </div>
+
+              <div className="mo-modal-footer">
+                <button type="button" className="mo-secondary" onClick={closeDetails}>Close</button>
+              </div>
+            </div>
+          </div>
+        )}
 
       </div>
     </div>
