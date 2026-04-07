@@ -117,7 +117,7 @@ const ModuleOrganiserDashboard = () => {
                 <tr key={index}>
                   <td>{ec.id}</td>
                   <td>{ec.name}</td>
-                  <td>
+                  <td className="ec-action-cell">
                     <button
                       type="button"
                       className="action-link action-button"

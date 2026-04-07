@@ -117,16 +117,36 @@
   vertical-align: middle;
 }
 .ec-table tbody tr:hover { background-color: rgba(0, 32, 91, 0.06); }
+.ec-action-cell {
+  display: flex;
+  align-items: center;
+}
+
 .action-link { color: #0056b3; text-decoration: underline; cursor: pointer; font-weight: 600; }
 .action-link:hover { color: #003d82; }
 .action-button {
-  background: none;
-  border: 0;
-  padding: 0;
+  background: rgba(20, 53, 115, 0.08);
+  border: 1px solid rgba(20, 53, 115, 0.18);
+  padding: 6px 12px;
   font: inherit;
-  line-height: inherit;
+  line-height: 1;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  text-decoration: none;
+  color: rgba(20, 53, 115, 0.98);
+  font-weight: 700;
+  cursor: pointer;
+}
+.action-button:hover {
+  background: rgba(20, 53, 115, 0.12);
+  border-color: rgba(20, 53, 115, 0.24);
+}
+.action-button:active { transform: translateY(0.5px); }
+.action-button:focus-visible {
+  outline: 3px solid rgba(20, 53, 115, 0.22);
+  outline-offset: 2px;
 }
 
 .badge { padding: 5px 10px; border-radius: 12px; font-size: 0.85rem; font-weight: bold; }
