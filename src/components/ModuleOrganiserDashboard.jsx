@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ModuleOrganiserDashboard.css';
-import qmulLogo from '../assets/qmul-logo.jpg';
+import qmulLogo from '../assets/qmul-logo-blue.png';
 import qmulLogoWhite from '../assets/qmul-logo-white.png';
 
 const ModuleOrganiserDashboard = () => {
@@ -64,7 +64,7 @@ const ModuleOrganiserDashboard = () => {
             <p>Active ECs: 12</p>
           </div>
           <div className="mod-card">
-            <h3>ECS505U Web Dev</h3>
+            <h3>ECS406U Communications and Networks</h3>
             <p>Active ECs: 4</p>
           </div>
           <div className="mod-card">
