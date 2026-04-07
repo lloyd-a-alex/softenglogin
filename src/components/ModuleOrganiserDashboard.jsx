@@ -4,6 +4,7 @@ import './ModuleOrganiserDashboard.css';
 import qmulLogo from '../assets/qmul-logo-blue.png';
 import qmulLogoWhite from '../assets/qmul-logo-white.png';
 import { moduleOrganiserDashboardData } from '../data/moduleOrganiserData';
+import { FaHome, FaCog, FaSignOutAlt, FaRegClipboard } from 'react-icons/fa';
 
 const ModuleOrganiserDashboard = () => {
   const navigate = useNavigate();
@@ -40,16 +41,30 @@ const ModuleOrganiserDashboard = () => {
       <div className="mo-sidebar">
         <div className="sidebar-top">
           <div className="sidebar-logo-container">
-            <img src={qmulLogo} alt="QMUL" className="sidebar-logo" />
+            <img src={qmulLogo} alt="Queen Mary University of London" className="sidebar-logo" />
           </div>
           <div className="sidebar-links">
-            <p className="nav-link" onClick={() => navigate('/dashboard')}>Home</p>
-            <p className="active-link">View Module ECs</p>
+            <button type="button" className="side-item side-item--active" onClick={() => navigate('/module-organiser')}>
+              <span className="side-icon"><FaHome /></span>
+              <span className="side-text">Home</span>
+            </button>
+
+            <button type="button" className="side-item" onClick={() => navigate('/module-organiser')}>
+              <span className="side-icon"><FaRegClipboard /></span>
+              <span className="side-text">View Module ECs</span>
+            </button>
           </div>
         </div>
         <div className="sidebar-bottom">
-          <p className="settings-link">⚙️ Settings</p>
-          <p className="settings-link" onClick={() => navigate('/login')}>🚪 Log out</p>
+          <button type="button" className="side-footer" onClick={() => {}}>
+            <span className="side-icon"><FaCog /></span>
+            <span className="side-text">Settings</span>
+          </button>
+
+          <button type="button" className="side-footer" onClick={() => navigate('/login')}>
+            <span className="side-icon"><FaSignOutAlt /></span>
+            <span className="side-text">Log out</span>
+          </button>
         </div>
       </div>
       
