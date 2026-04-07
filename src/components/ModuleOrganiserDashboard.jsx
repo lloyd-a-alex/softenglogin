@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './ModuleOrganiserDashboard.css';
 import qmulLogo from '../assets/qmul-logo-blue.png';
 import qmulLogoWhite from '../assets/qmul-logo-white.png';
+import { moduleOrganiserDashboardData } from '../data/moduleOrganiserData';
 
 const ModuleOrganiserDashboard = () => {
   const navigate = useNavigate();
@@ -10,12 +11,9 @@ const ModuleOrganiserDashboard = () => {
   const [dateFilter, setDateFilter] = useState('Newest First');
   const [selectedEc, setSelectedEc] = useState(null);
 
-  const [ecs, setEcs] = useState([
-    { id: 'EC-8832', name: 'Akbar Ali', module: 'ECS506U', date: '2026-03-25', status: 'Pending' },
-    { id: 'EC-8835', name: 'Jane Doe', module: 'ECS505U', date: '2026-03-20', status: 'Approved' },
-    { id: 'EC-8810', name: 'John Smith', module: 'ECS504U', date: '2026-03-28', status: 'Rejected' },
-    { id: 'EC-8841', name: 'Alex Lloyd', module: 'ECS506U', date: '2026-03-29', status: 'Pending' }
-  ]);
+  // swap this with actual backend data later
+  const { user, modules, ecs: initialEcs } = moduleOrganiserDashboardData;
+  const [ecs, setEcs] = useState(initialEcs);
 
   // ez way to filter and sort
   const filteredEcs = ecs
@@ -58,7 +56,7 @@ const ModuleOrganiserDashboard = () => {
       <div className="mo-content">
         <div className="mo-header">
           <div className="header-left">
-            <h1>Welcome, Mostafa!</h1>
+            <h1>Welcome, {user.name}!</h1>
           </div>
           <div className="header-right">
             <div className="east-icon">
@@ -68,18 +66,12 @@ const ModuleOrganiserDashboard = () => {
         </div>
 
         {<div className="module-cards">
-          <div className="mod-card">
-            <h3>ECS506U Software Engineering</h3>
-            <p>Active ECs: 12</p>
-          </div>
-          <div className="mod-card">
-            <h3>ECS406U Communications and Networks</h3>
-            <p>Active ECs: 4</p>
-          </div>
-          <div className="mod-card">
-            <h3>ECS504U Database Systems</h3>
-            <p>Active ECs: 7</p>
-          </div>
+          {modules.map((m) => (
+            <div key={m.code} className="mod-card">
+              <h3>{m.code} {m.name}</h3>
+              <p>Active ECs: {m.activeEcs}</p>
+            </div>
+          ))}
         </div>}
 
         {<div className="mo-panel">
