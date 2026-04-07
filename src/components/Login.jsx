@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
-import qmulEECS from '../assets/qmul-eecs.png'; 
+import qmulEECS from '../assets/qmul-eecs.jpg'; 
 
 const Login = () => {
   const [email, setEmail] = useState('');
