@@ -22,10 +22,11 @@
   width: 185px;
 }
 .sidebar-links {
-  margin-top: 18px;
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
   padding: 0 12px;
+  gap: 0px;
 }
 
 .side-item {
@@ -33,7 +34,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 9px 14px;
+  padding: 0 14px;
+  height: 34px;
+  margin: 0;
   border-radius: 999px;
   border: 0;
   cursor: pointer;
@@ -41,6 +44,7 @@
   color: rgba(255, 255, 255, 0.92);
   font-weight: 700;
   font-size: 0.95rem;
+  line-height: 1;
   text-align: left;
 }
 .side-item:hover { background: rgba(255, 255, 255, 0.08); }
@@ -72,11 +76,11 @@
 .side-text { line-height: 1; }
 
 .sidebar-bottom {
-  padding: 22px 18px;
+  padding: 16px 18px;
   border-top: 1px solid rgba(255,255,255,0.12);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 .side-footer {
   width: 100%;
@@ -88,7 +92,9 @@
   color: rgba(255, 255, 255, 0.92);
   font-weight: 700;
   cursor: pointer;
-  padding: 8px 6px;
+  padding: 0 6px;
+  height: 32px;
+  margin: 0;
   text-align: left;
   font-size: 0.95rem;
 }
