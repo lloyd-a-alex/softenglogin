@@ -80,6 +80,10 @@ const ModuleOrganiserDashboard = () => {
       ? 'All Modules ECs'
       : `${selectedModuleObj?.code || selectedModule} ${selectedModuleObj?.name || ''} ECs`.trim();
 
+  const getActiveEcsCount = (moduleCode) => {
+    return ecs.filter((ec) => ec.moduleCode === moduleCode && ec.status === 'Pending').length;
+  };
+
   const pickModule = (code) => {
     if (code === selectedModule) {
       setSelectedModule('All');
@@ -153,7 +157,7 @@ const ModuleOrganiserDashboard = () => {
               }}
             >
               <h3>{m.code} {m.name}</h3>
-              <p>Active ECs: {m.activeEcs}</p>
+              <p>Active ECs: {getActiveEcsCount(m.code)}</p>
             </div>
           ))}
         </div>}

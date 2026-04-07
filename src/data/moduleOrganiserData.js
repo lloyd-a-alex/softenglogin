@@ -11,9 +11,9 @@ export const moduleOrganiserDashboardData = {
     ],
   },
   modules: [
-    { code: 'ECS506U', name: 'Software Engineering', activeEcs: 12 },
-    { code: 'ECS406U', name: 'Communications and Networks', activeEcs: 4 },
-    { code: 'ECS504U', name: 'Database Systems', activeEcs: 7 },
+    { code: 'ECS506U', name: 'Software Engineering' },
+    { code: 'ECS406U', name: 'Communications and Networks' },
+    { code: 'ECS504U', name: 'Database Systems' },
   ],
   ecs: [
     {
