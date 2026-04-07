@@ -104,10 +104,29 @@
   box-shadow: none;
   border: 1px solid rgba(0,0,0,0.06);
 }
-.mo-panel h2 { margin-top: 0; color: #333; margin-bottom: 20px; }
-.mo-controls { display: flex; gap: 15px; margin-bottom: 25px; }
-.search-bar { flex: 1; padding: 10px 14px; border: 1px solid rgba(0,0,0,0.12); border-radius: 999px; background: #fff; }
-.date-filter { padding: 10px 14px; border: 1px solid rgba(0,0,0,0.12); border-radius: 999px; background-color: #fff; min-width: 140px; }
+.mo-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.mo-panel h2 { margin: 0; color: #111827; }
+.mo-controls { display: flex; gap: 12px; align-items: center; margin: 0; }
+.search-bar {
+  width: 220px;
+  padding: 9px 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  background: #fff;
+}
+.date-filter {
+  width: 140px;
+  padding: 9px 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  background-color: #fff;
+}
 
 .ec-table { width: 100%; border-collapse: collapse; text-align: left; }
 .ec-table th { background-color: transparent; padding: 12px 15px; border-bottom: 2px solid rgba(0,0,0,0.10); color: rgba(0,0,0,0.55); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em; }
