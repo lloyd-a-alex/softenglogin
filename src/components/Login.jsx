@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
-import qmulLogo from '../assets/qmul-logo.jpg'; 
+import qmulEECS from '../assets/qmul-eecs.png'; 
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -18,7 +18,7 @@ const Login = () => {
   return (
     <div className="login-wrapper">
       <div className="login-left">
-        <img src={qmulLogo} alt="QMUL Logo" className="qmul-logo" />
+        <img src={qmulEECS} alt="QMUL Logo" className="qmul-logo" />
         <h1>Welcome to the</h1>
         <h2>EECS support system</h2>
       </div>
