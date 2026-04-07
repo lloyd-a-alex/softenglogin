@@ -10,8 +10,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log('Logging in user:', email);
-    // Temporary bypass directly to the Module Organiser dashboard for the prototype
+    // prototype shortcut
     navigate('/module-organiser');
   };
 
@@ -20,7 +19,7 @@ const Login = () => {
       <div className="login-left">
         <img src={qmulEECS} alt="QMUL Logo" className="qmul-logo" />
         <h1>Welcome to the</h1>
-        <h2>EECS support system</h2>
+        <h2>EECS Support System</h2>
       </div>
       <div className="login-right">
         <div className="form-container">

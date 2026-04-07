@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <div style={{ padding: '50px', textAlign: 'center', fontFamily: 'Arial' }}>
       <h1>Lab Staff Dashboard</h1>
-      <p>dummy dashboard.</p>
+      <p>Prototype dashboard.</p>
     </div>
   );
 };

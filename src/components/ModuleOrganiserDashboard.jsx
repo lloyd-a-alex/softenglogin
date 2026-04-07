@@ -12,11 +12,11 @@ const ModuleOrganiserDashboard = () => {
   const [dateFilter, setDateFilter] = useState('Newest First');
   const [selectedEc, setSelectedEc] = useState(null);
 
-  // swap this with actual backend data later
+  // swap this with backend data later
   const { user, modules, ecs: initialEcs } = moduleOrganiserDashboardData;
   const [ecs, setEcs] = useState(initialEcs);
 
-  // ez way to filter and sort
+  // simple filter + sort
   const filteredEcs = ecs
     .filter(ec => 
       ec.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
