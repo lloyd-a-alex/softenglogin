@@ -138,7 +138,7 @@
   margin: 8px 0 16px 0;
   color: #111827;
   font-size: 1.35rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .module-cards {
@@ -159,8 +159,8 @@
   justify-content: center;
   gap: 6px;
 }
-.mod-card h3 { margin: 0; color: #0b1220; font-size: 1.05rem; font-weight: 700; }
-.mod-card p { margin: 0; font-weight: 800; color: rgba(0,0,0,0.80); font-size: 1.15rem; }
+.mod-card h3 { margin: 0; color: #0b1220; font-size: 1.05rem; font-weight: 600; }
+.mod-card p { margin: 0; font-weight: 600; color: rgba(0,0,0,0.78); font-size: 1.05rem; }
 
 .mod-card:first-child {
   background: #4b658f;
