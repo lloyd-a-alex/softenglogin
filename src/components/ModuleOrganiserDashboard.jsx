@@ -48,10 +48,12 @@ const ModuleOrganiserDashboard = () => {
       <div className="mo-content">
         <div className="mo-header">
           <div className="header-left">
-            <h1>Welcome, Mustafa</h1>
+            <h1>Welcome, Mostafa!</h1>
           </div>
           <div className="header-right">
-            <div className="profile-icon"></div>
+            <div className="east-icon">
+              <img src="/src/assets/qmul-logo-white.png" alt="QMUL White Logo" className="east-Logo" />
+            </div>
           </div>
         </div>
 

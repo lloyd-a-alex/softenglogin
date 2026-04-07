@@ -63,11 +63,9 @@
   color: #333;
   font-size: 1.8rem;
 }
-.profile-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #00205b;
-  border-radius: 50%;
+.east-icon {
+  width: 100px;
+  height: 100px;
 }
 
 /* Module Boxes */
