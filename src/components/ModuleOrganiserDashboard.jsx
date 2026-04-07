@@ -65,6 +65,8 @@ const ModuleOrganiserDashboard = () => {
           </div>
         </div>
 
+        <h2 className="modules-title">Your Modules</h2>
+
         {<div className="module-cards">
           {modules.map((m) => (
             <div key={m.code} className="mod-card">

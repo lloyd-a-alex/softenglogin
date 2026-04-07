@@ -79,6 +79,13 @@
 }
 
 /* Module Boxes */
+.modules-title {
+  margin: 8px 0 16px 0;
+  color: #111827;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
 .module-cards {
   display: flex;
   gap: 20px;
@@ -86,15 +93,28 @@
 }
 .mod-card {
   background: #cfd6e4;
-  padding: 22px 24px;
-  border-radius: 12px;
+  padding: 22px 26px;
+  border-radius: 18px;
   flex: 1;
   box-shadow: none;
-  border: 1px solid rgba(0,0,0,0.06);
-  min-height: 88px;
+  border: none;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
 }
-.mod-card h3 { margin-top: 0; color: #00205b; font-size: 1.1rem; margin-bottom: 10px; }
-.mod-card p { margin: 0; font-weight: bold; color: #555; }
+.mod-card h3 { margin: 0; color: #0b1220; font-size: 1.05rem; font-weight: 700; }
+.mod-card p { margin: 0; font-weight: 800; color: rgba(0,0,0,0.80); font-size: 1.15rem; }
+
+.mod-card:first-child {
+  background: #4b658f;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+.mod-card:first-child h3,
+.mod-card:first-child p {
+  color: #fff;
+}
 
 /* Table Panel */
 .mo-panel {
