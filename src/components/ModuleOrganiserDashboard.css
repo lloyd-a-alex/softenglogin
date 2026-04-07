@@ -13,6 +13,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
 }
 .sidebar-logo-container {
   padding: 34px 22px 10px 22px;
@@ -51,13 +55,6 @@
 .side-item--active {
   background: rgba(0, 0, 0, 0.16);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
-}
-.side-item--sub {
-  border-radius: 14px;
-  padding-left: 46px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.90);
 }
 .side-icon {
   width: 22px;
@@ -161,6 +158,10 @@
 }
 .mod-card h3 { margin: 0; color: #0b1220; font-size: 1.05rem; font-weight: 600; }
 .mod-card p { margin: 0; font-weight: 600; color: rgba(0,0,0,0.78); font-size: 1.05rem; }
+.mod-card--active {
+  outline: 3px solid rgba(20, 53, 115, 0.20);
+  outline-offset: 2px;
+}
 
 .mod-card:first-child {
   background: #4b658f;
@@ -204,13 +205,14 @@
 }
 
 .ec-table { width: 100%; border-collapse: collapse; text-align: left; }
-.ec-table th { background-color: transparent; padding: 12px 15px; border-bottom: 2px solid rgba(0,0,0,0.10); color: rgba(0,0,0,0.55); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em; }
+.ec-table th { background-color: transparent; padding: 12px 15px; border-bottom: 1px solid rgba(0,0,0,0.14); color: rgba(0,0,0,0.55); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.02em; }
 .ec-table td {
   padding: 14px 15px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   vertical-align: middle;
 }
-.ec-table tbody tr:hover { background-color: rgba(0, 32, 91, 0.06); }
+.ec-table tbody tr:hover { background-color: rgba(20, 53, 115, 0.06); }
+.ec-row--selected { background-color: rgba(20, 53, 115, 0.10); }
 .ec-action-cell {
   display: flex;
   align-items: center;
@@ -244,10 +246,41 @@
   outline-offset: 2px;
 }
 
-.badge { padding: 5px 10px; border-radius: 12px; font-size: 0.85rem; font-weight: bold; }
-.badge.pending { background-color: #ffeeba; color: #856404; }
-.badge.approved { background-color: #d4edda; color: #155724; }
-.badge.rejected { background-color: #f5c6cb; color: #721c24; }
+.badge { padding: 5px 10px; border-radius: 999px; font-size: 0.85rem; font-weight: 800; display: inline-block; min-width: 86px; text-align: center; }
+.badge.pending { background-color: #ffd08a; color: #7a4a00; }
+.badge.closed { background-color: #8bd35c; color: #0f3b08; }
+
+.mo-empty {
+  padding: 18px 10px 4px 10px;
+  color: rgba(0,0,0,0.55);
+  font-weight: 600;
+}
+
+/* Tiles */
+.mo-tiles {
+  display: flex;
+  gap: 22px;
+  margin: 10px 0 22px 0;
+}
+.mo-tile {
+  flex: 1;
+  border-radius: 18px;
+  background: #cfd6e4;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mo-tile--muted { background: #cfd6e4; }
+.mo-tile--action {
+  background: #4b658f;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+.mo-tile-label { font-weight: 700; color: rgba(0,0,0,0.80); }
+.mo-tile--action .mo-tile-label { color: rgba(255,255,255,0.92); }
+.mo-tile-value { font-weight: 800; font-size: 1.1rem; }
 
 /* Details modal */
 .mo-modal-overlay {
@@ -311,6 +344,28 @@
   padding: 16px 20px;
 }
 
+.mo-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+  padding: 14px 20px 0 20px;
+}
+.mo-modal-action {
+  padding: 12px 12px;
+  border-radius: 12px;
+  background: rgba(20, 53, 115, 0.06);
+  border: 1px solid rgba(20, 53, 115, 0.10);
+}
+.mo-select {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #fff;
+  font-weight: 700;
+}
+
 .mo-field {
   padding: 12px 12px;
   border-radius: 12px;
@@ -334,6 +389,7 @@
 .mo-modal-footer {
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
   padding: 12px 20px 18px 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -347,3 +403,14 @@
   font-weight: 700;
 }
 .mo-secondary:hover { background: rgba(0, 0, 0, 0.04); }
+
+.mo-primary {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 53, 115, 0.28);
+  background: rgba(20, 53, 115, 0.10);
+  cursor: pointer;
+  font-weight: 800;
+  color: rgba(20, 53, 115, 0.98);
+}
+.mo-primary:hover { background: rgba(20, 53, 115, 0.14); }

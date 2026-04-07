@@ -82,6 +82,17 @@ button:hover {
   background-color: #f0f0f0;
 }
 
+.login-error {
+  margin: 14px 0 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(176, 0, 32, 0.20);
+  background: rgba(176, 0, 32, 0.06);
+  color: rgba(176, 0, 32, 0.95);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
 .qmul-logo {
   width: 250px;
   margin-bottom: 30px;
